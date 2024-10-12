@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+@font-face {
+    font-family: Childa;
+    src: url(fonts/Childa.ttf);
+}
+
+@font-face {
+    font-family: Cream;
+    src: url(fonts/CreamCake.otf);
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+    height: 5px;
+}
+
+
+body::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff000000;
+}
+
+body {
+    font-family: "Afacad Flux", sans-serif !important;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(fondos/0.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.task-input {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif !important;
+    border: none !important;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    outline: none;
+    font-family: "Afacad Flux", sans-serif !important;
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Afacad Flux", sans-serif !important;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: #000000 1px solid;
+}
+
+button:hover {
+    background-color: #52c0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    color: white;
+    transform: translateY(2px);
+    background-color: #3b96c3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-columns {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.column {
+    background: rgba(255, 255, 255, 0.153);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 10px;
+    font-size: 20px;
+    text-shadow: -5px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-title {
+    font-size: 70px;
+    text-align: center;
+    font-family: "Cream";
+    margin: 20px;
+    text-shadow: -5px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    text-align: center;
+    font-family: "Childa";
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #000000;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+.press-info {
+    text-align: center;
+    font-size: 15px;
+    font-family: "Afacad Flux", sans-serif !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chooseh2 {
+    color: #000000;
+}
+
+
+#settings-panel {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: fixed;
+    border-radius: 15px;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(234, 234, 234);
+    padding: 20px;
+    z-index: 9999;
+    width: 50%;
+    height: 60%;
+    overflow: auto;
+}
+
+
+#settings-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: auto;
+    z-index: 1000;
+}
+
+#backgrounds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#backgrounds img {
+    width: 150px;
+    height: 56px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+#backgrounds img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#close-settings {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Afacad Flux", sans-serif !important;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: #000000 1px solid;
+    display: block;
+    margin: 20px auto;
+}
+
+#close-settings:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#close-settings:active {
+    color: white;
+    transform: translateY(2px);
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#settings-panel::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+    height: 5px;
+}
+
+
+#settings-panel::-webkit-scrollbar-button:increment,
+#settings-panel::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+#settings-panel::-webkit-scrollbar-thumb {
+    background-color: #ff000000;
+}
+
+.color-customization {
+    display: flex;              
+    flex-direction: column;    
+    align-items: center;        
+    margin: 20px 0;          
+}
+
+.color-customization input,
+.color-customization button {
+    margin-top: 10px;       
+}

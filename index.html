@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cositas por hacer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="iconos/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <img id="settings-btn" src="iconos/settings.png" alt="Configuraciones">
+
+    <div id="settings-panel">
+
+        <h2 class="chooseh2">Elige un fondo de pantalla</h2>
+        <div id="backgrounds"></div>
+        
+        <h2 class="chooseh2">Personaliza el color del hover de los botones</h2>
+        <div class="color-customization">
+            <input type="color" id="hover-color-picker" value="#52c0ff"> 
+            <button id="apply-hover-color">Aplicar Color</button>
+        </div>
+        
+        <button id="close-settings">Cerrar</button>
+    </div>
+
+
+
+    <h1 class="main-title animate__animated animate__flash">Cositas por hacer</h1>
+    <p class="press-info animate__animated animate__fadeIn">Presiona <b>Enter</b> para añadir una tarea. / También
+        puedes configurar tu fondo de pantalla en <img src="iconos/settings.png" style="width: 10px; height: auto;"
+            alt="configuraciones"></p>
+    <div class="task-input animate__animated animate__fadeIn animate__delay-1s">
+        <input type="text" id="new-task" placeholder="Escribe una nueva tarea">
+        <button id="add-task">Agregar tarea</button>
+    </div>
+    <div class="task-columns animate__animated animate__fadeIn animate__delay-2s">
+        <div class="column">
+            <h2>Pendiente</h2>
+            <ul id="pendiente-tasks" class="animate__animated animate__backInUp"></ul>
+        </div>
+        <div class="column">
+            <h2>Haciendo</h2>
+            <ul id="haciendo-tasks"></ul>
+        </div>
+        <div class="column">
+            <h2>Completada</h2>
+            <ul id="completada-tasks"></ul>
+        </div>
+    </div>
+    <div class="button-container animate__animated animate__fadeIn animate__delay-3s">
+        <button id="clear-tasks">Borrar todas las tareas :D</button>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/conf.js"></script>
+</body>
+
+</html>
